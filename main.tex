@@ -1,0 +1,123 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+
+\documentclass[bachelor]{ustcthesis}
+% doctor|master|bachelor [academic|professional] [chinese|english] [print|pdf]
+% [super|numebers|authoryear]
+
+\title{基于深度学习的金融风控研究 }
+\author{郑非}
+\major{计算机科学与技术}
+\supervisor{郑小林\ 副教授}
+\cosupervisor{李金龙\ 副教授}
+% \date{二〇一七年五月一日} % 注释掉则为今日
+% \professionaltype{专业学位类型}
+% \secretlevel{秘密}        % 绝密|机密|秘密，注释本行则不保密
+% \secretyear{20}           % 保密年限
+
+\entitle{Deep Learning in Fiancial Risk Management}
+\enauthor{Fei Zheng}
+\enmajor{Computer Science and Technology}
+\ensupervisor{Asso. Prof. Xiaolin Zheng}
+\encosupervisor{Asso. Jinlong Li}
+% \endate{May 1, 2017}      % Today if commented
+% \enprofessionaltype{Professional degree type}
+% \ensecretlevel{Secret}    % Top secret|Highly secret|Secret
+
+
+% 加载宏包和配置
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{siunitx}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\renewcommand{\lstlistingname}{代码}
+\lstset{ %  
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}  
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code  
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace  
+  breaklines=true,                 % sets automatic line breaking  
+  captionpos=bl,                    % sets the caption-position to bottom  
+  commentstyle=\color{green},    % comment style  
+  deletekeywords={...},            % if you want to delete keywords from the given language  
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code  
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8  
+  frame=single,                    % adds a frame around the code  
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)  
+ %  keywordstyle=\color{blue},       % keyword style  
+  %language=Python,                 % the language of the code  
+  morekeywords={*,...},            % if you want to add more keywords to the set  
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)  
+  numbersep=5pt,                   % how far the line-numbers are from the code  
+  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers  
+  % rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))  
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'  
+  showstringspaces=false,          % underline spaces within strings only  
+  showtabs=false,                  % show tabs within strings adding particular underscores  
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered  
+  % stringstyle=\color{orange},     % string literal style  
+  tabsize=2,                       % sets default tabsize to 2 spaces  
+  %title=myPython.py                   % show the filename of files included with \lstinputlisting; also try caption instead of title  
+}  
+
+\DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
+\newcommand\pkg{\textsf}
+
+\renewcommand\vec{\symbf}
+\newcommand\mat{\symbf}
+\newcommand\ts{\symbfsf}
+\newcommand\real{\mathbf{R}}
+
+
+
+
+\begin{document}
+
+% 研究生论文:
+%   封面，原创性声明和授权使用声明
+%   frontmatter: 摘要，目录，[图、表清单]，[符号说明]
+%   mainmatter: 正文章节，参考文献
+%   appendix: 附录
+%   backmatter: 致谢，已发表论文列表
+%
+% 本科生论文:
+%   封面
+%   frontmatter: 致谢，目录，摘要
+%   mainmatter: 正文章节，参考文献
+%   appendix: 附录
+
+\maketitle
+\makestatement
+
+\frontmatter
+%\input{chapters/abstract}
+\tableofcontents
+% \listoffigures
+% \listoftables
+%\input{chapters/notation}
+
+\mainmatter
+\input{chapters/my_abstract.tex}
+\input{chapters/my_introduction.tex}
+\input{chapters/my_related_theory_overview.tex}
+\input{chapters/my_data_refinement.tex}
+%\input{chapters/intro}
+%\input{chapters/floats}
+%\input{chapters/math}
+%\input{chapters/citations}
+\bibliography{bib/ustc}
+\appendix
+%\input{chapters/complementary}
+
+\backmatter
+%\input{chapters/acknowledgements}
+%\input{chapters/publications}
+
+\end{document}
